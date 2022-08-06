@@ -10,7 +10,7 @@ class Calculator:
         except ValueError:
             return 'переменные могут быть только числового типа(int, float)'
         else:
-            return self.a + self.b
+            return float(self.a) + float(self.b)
 
     def sub(self):
         try:
@@ -19,7 +19,7 @@ class Calculator:
         except ValueError:
             return 'переменные могут быть только числового типа(int, float)'
         else:
-            return self.a - self.b
+            return float(self.a) - float(self.b)
 
     def div(self):
         try:
@@ -29,11 +29,11 @@ class Calculator:
             return 'переменные могут быть только числового типа(int, float)'
         else:
             try:  # проверка деления на ноль
-                1 / self.b
+                1 / float(self.b)
             except ZeroDivisionError:
                 return 'Деление на ноль! Аргумент b не может быть равен нулю!'
             else:
-                return self.a / self.b
+                return float(self.a) / float(self.b)
 
     def mul(self):
         try:
@@ -42,7 +42,7 @@ class Calculator:
         except ValueError:
             return 'переменные могут быть только числового типа(int, float)'
         else:
-            return self.a * self.b
+            return float(self.a) * float(self.b)
 
 
 if __name__ == "__main__":
